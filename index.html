@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Konten Instagram</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="card">
+      <div class="top">
+        <div class="userDetails">
+          <div class="profile_img">
+            <img src="gambar/profile2.jpg" class="cover" />
+          </div>
+          <h3>edokomikecil <br /><span>Kota Bekasi, Jawa Barat</span></h3>
+        </div>
+
+        <div><img src="gambar/dot.png" class="dot" /></div>
+      </div>
+
+      <div class="imgBx">
+        <img src="gambar/posting2.jpg" alt="" class="cover" />
+      </div>
+
+      <div class="actionnBtn">
+        <div class="left">
+          <img
+            src="gambar/hearts.png"
+            alt=""
+            class="heart"
+            onclick="likeButton()"
+          />
+          <img src="gambar/comment.png" alt="" />
+          <img src="gambar/share.png" alt="" />
+        </div>
+
+        <div class="right">
+          <img src="gambar/bookmark.png" alt="" />
+        </div>
+      </div>
+      <h4 class="like">3.657 likes</h4>
+      <h4 class="message">
+        <b>edokomikecil</b>
+        thanks for your love and support <span>#edokomikecil</span>
+        <span>#komik</span> <span>#bekasi</span> <span>#manga</span>
+      </h4>
+
+      <h4 class="comment">View all 4 comments</h4>
+
+      <div class="addComments">
+        <div class="userImg">
+          <img src="gambar/user.jpg" class="cover" alt="" />
+        </div>
+        <input type="text" class="text" placeholder="Add a comment..." />
+      </div>
+      <h5 class="postTime">5 hours age</h5>
+    </div>
+
+    <script>
+      function likeButton() {
+        let heart = document.querySelector(".heart");
+        let like = document.querySelector(".like");
+
+        if (heart.src.match("gambar/hearts.png")) {
+          heart.src = "gambar/heart_like.png";
+          like.innerHTML = "3.658 likes";
+        } else {
+          heart.src = "gambar/hearts.png";
+          like.innerHTML = "3.657 likes";
+        }
+      }
+    </script>
+  </body>
+</html>
